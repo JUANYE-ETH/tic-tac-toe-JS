@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juan's Tic Tac Toe</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+    <div class="arcade-machine">
+      <div class="arcade-screen">
+        <div class="container">
+          <h1>Tic Tac Toe</h1>
+          <div class="game-board">
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+          </div>
+          <div class="game-overlay">
+            <button class="start-button">Start</button>
+          </div>
+        </div>
+      </div>
+      <div class="arcade-controls">
+        <div class="button-container">
+          <p>
+            <button class="mode-button" data-mode="1-player">1 Player</button>
+            <button class="mode-button" data-mode="2-player">2 Player</button>
+          </p>
+          <p class="mode-message">Select Player Mode</p>
+          <div class="difficulty-container hidden">
+            <p>
+              <button class="difficulty-button" data-difficulty="easy">Easy</button>
+              <button class="difficulty-button" data-difficulty="normal">Normal</button>
+              <button class="difficulty-button" data-difficulty="hard">Hard</button>
+            </p>
+          </div>
+          <button class="reset-button">Reset</button>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
