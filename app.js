@@ -35,9 +35,7 @@ function validateAndStartGame() {
 	startGame();
 
 	if (!validateGameSettings()) {
-		alert(
-			"Please select a player mode and a difficulty (if 1-player mode is selected) before starting the game."
-		);
+		alert("Please select a player mode and a difficulty below.");
 	}
 }
 

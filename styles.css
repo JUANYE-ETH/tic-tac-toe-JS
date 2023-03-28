@@ -90,7 +90,7 @@ h1 {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-  }
+}
 
 button,
 .mode-button,
@@ -157,4 +157,10 @@ button:hover,
 
 .cell[data-player="O"]:before {
     text-shadow: 0 0 5px #00c6ff, 0 0 10px #00c6ff, 0 0 20px #00c6ff, 0 0 30px #00c6ff, 0 0 40px #00c6ff;
+}
+
+@media screen and (max-width: 600px) {
+    .cell:hover {
+        background-color: #333;
+    }
 }
