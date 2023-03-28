@@ -82,7 +82,9 @@ function computerMove() {
 			}
 			break;
 		case "hard":
-			minimaxMove();
+			if (!blockOpponentWin()) {
+				minimaxMove();
+			}
 			break;
 		case "easy":
 		default:
@@ -210,7 +212,14 @@ function minimax(depth, isMaximizing, alpha, beta) {
 				cells[i].setAttribute("data-player", "O");
 				let score = minimax(depth + 1, false, alpha, beta);
 				cells[i].removeAttribute("data-player");
+
+				// Prioritize blocking the opponent
+				if (depth === 0 && checkWin("X")) {
+					score += 20;
+				}
+
 				bestScore = Math.max(score, bestScore);
+
 				alpha = Math.max(alpha, bestScore);
 				if (beta <= alpha) {
 					break;
@@ -226,6 +235,7 @@ function minimax(depth, isMaximizing, alpha, beta) {
 				let score = minimax(depth + 1, true, alpha, beta);
 				cells[i].removeAttribute("data-player");
 				bestScore = Math.min(score, bestScore);
+
 				beta = Math.min(beta, bestScore);
 				if (beta <= alpha) {
 					break;
